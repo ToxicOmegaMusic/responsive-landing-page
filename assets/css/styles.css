@@ -1,10 +1,211 @@
 /* General Styles */
 /* Apply to all sizes */
 *, *:before, *:after {
+  font-family: sans-serif;
   box-sizing: border-box;
 }
 
+body {
+  background-color: ghostwhite;
+  margin: 0
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+  background-color: ghostwhite;
+}
+
+.mainImg {
+  padding: 15px 0 5px 0;
+  width: 320px;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 0 0 10px 0;
+}
+.navBar li {
+  padding: 5px;
+}
+
+.main {
+  margin-top: 10rem;
+}
+
+input[type="email"] {
+  padding: 5px 90px 5px 5px;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: rgb(221, 191, 19);
+  padding: 5px 20px;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.button h3 {
+  margin: 0;
+}
+
+.centerBox {
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 1000px;
+}
+
+.cardBox {
+  width: 100vw;
+  display: flex;
+  padding: 10px 25px;
+}
+.cardBox img {
+  width: 4rem;
+  fill: orangered;
+  display: none;
+}
+
+.card {
+  width: 10022px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 25px;
+}
+.card h2,
+.card p {
+  margin: 0;
+}
+.card p {
+  text-align: center;
+}
+
+iframe {
+  size:410px;
+  margin: 50px 5px;
+}
+
+.boxGroup {
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.box {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: 1px black solid;
+  width: 18rem;
+  margin: 5px;
+}
+.box h4 {
+  display: block;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: rgb(226, 226, 226);
+  width: 18rem;
+  margin: 0;
+  padding: 12px;
+}
+.box .button {
+  margin-bottom: 1rem;
+  padding: 10px 20px;
+}
+.box p {
+  margin: 5px;
+}
+.box p:last-of-type {
+  margin-bottom: 35px;
+}
+
+.footer {
+  background-color: rgb(226, 226, 226);
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+}
+
+.footer ul li {
+  padding-right: 1rem;
+}
 
 /* Add Breakpoints Here */
 /* Apply to certain size and above */
 
+@media only screen and (min-width: 550px) {
+  .card {
+    align-items: baseline;
+  }
+  .card p {
+    text-align: left;
+  }
+  .cardBox img {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main {
+    margin-top: 7rem;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .navBar {
+    width: 35vw;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main {
+    margin-top: 5rem;
+  }
+
+  .boxGroup {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
