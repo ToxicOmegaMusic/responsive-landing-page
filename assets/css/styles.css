@@ -53,6 +53,9 @@ a {
 .main {
   margin-top: 10rem;
 }
+.main .container:first-of-type {
+  text-align: center;
+}
 
 input[type="email"] {
   padding: 5px 90px 5px 5px;
